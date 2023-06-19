@@ -1,0 +1,4 @@
+baseURL = 'https://blog.bpventures.us'
+languageCode = 'en-us'
+title = 'BP Ventures Blog'
+theme = 'ananke'
