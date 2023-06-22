@@ -1,0 +1,19 @@
+.dashboard-image1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .dashboard-image1 {
+    float: left;
+    margin-right: 20px;
+    width: 50%;
+  }
+}
+
+.main-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
