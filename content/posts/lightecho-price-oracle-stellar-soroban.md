@@ -1,14 +1,18 @@
-Title: Introducing LightEcho: A Next-Generation Smart Contract Price Oracle on the Stellar Soroban Platform
-Date: 2023-06-22 10:20
-Category: Oracle
+---                                                                                                                                                                                                       
+Title: "Introducing LightEcho: A Next-Generation Smart Contract Price Oracle on the Stellar Soroban Platform"
+Date: 2023-06-19T14:02:16Z
+Draft: false
+Tags: oracle
+Category: oracle
+Slug: annoucing-stellar-lightecho-stellar-oracle-for-soroban
+Authors: Christian Larsen
 
-<link rel="stylesheet" href="/static/css/styles.css">
 
-![Logo](/images/lightMode-lightecho-logo.dd70c7a3.svg 'Logo'){.main-logo}
+---
 
-![Image Description](/images/introducingLightEcho.729595b4.png){.dashboard-image1}
 
-BP Ventures is delighted to introduce the Lightecho Oracle, a pioneering Smart Contract Price Oracle on Stellar's Soroban system, as an essential addition to the ecosystem. The Lightecho Oracle aims to fill in the gaps left by existing data providers, offering extensive coverage and depth of market data that is vital for advanced financial products.
+ 
+ BP Ventures is delighted to introduce the Lightecho Oracle, a pioneering Smart Contract Price Oracle on Stellar's Soroban system, as an essential addition to the ecosystem. The Lightecho Oracle aims to fill in the gaps left by existing data providers, offering extensive coverage and depth of market data that is vital for advanced financial products.
 
 One of the Lightecho Oracle's distinguishing features is its focus on providing emerging market currency data. With our extensive experience and deep expertise in handling these types of data feeds, we are able to offer a service that many other oracles do not cater to effectively. This focus empowers developers and companies to create more diverse and inclusive financial solutions, particularly for underrepresented and developing markets.
 
