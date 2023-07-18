@@ -1,9 +1,12 @@
 AUTHOR = "BPV"
 SITENAME = "LightEcho Blog"
 SITEURL = ""
-# LOGO_URL = "images/lightMode-lightecho-logo.dd70c7a3.svg"
+LOGO_URL = "images/lightecho-icon-300x300.png"
+
+THUMBNAIL_DIR = 'images/thumbnails'
 
 PATH = "content"
+THEME = "notmyidea"
 
 TIMEZONE = "Europe/Rome"
 
@@ -19,17 +22,12 @@ AUTHOR_FEED_RSS = None
 
 STATIC_PATHS = [
     "images",
-    "images/favicon.ico",
+    "images/lightecho-icon.ico",
     "static",
 ]
-EXTRA_PATH_METADATA = {"images/favicon.ico": {"path": "favicon.ico"}}
+EXTRA_PATH_METADATA = {"images/lightecho-icon.ico": {"path": "favicon.ico"}}
 
-# TEMPLATE_CONTEXTS = {
-#     "logo_url": LOGO_URL,
-# }
-
-# Blogroll
-LINKS = (
+TOP_LINKS = (
     ("Lightecho FAQ", "https://lightecho.io/faq"),
     ("BPV", "https://bpventures.us/"),
     ("Lightecho.io", "https://lightecho.io/"),

@@ -1,13 +1,11 @@
 ---                                                                                                                                                                                                       
-Title: "Introducing LightEcho: A Next-Generation Smart Contract Price Oracle on the Stellar Soroban Platform"
+Title: Introducing LightEcho: A Next-Generation Smart Contract Price Oracle on the Stellar Soroban Platform
 Date: 2023-06-19T14:02:16Z
 Draft: false
 Tags: oracle
 Category: oracle
 Slug: annoucing-stellar-lightecho-stellar-oracle-for-soroban
 Authors: Christian Larsen
-
-
 ---
 
 

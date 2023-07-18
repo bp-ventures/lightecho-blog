@@ -20,7 +20,7 @@ body {
     background: #F5F4EF;
     color: #000305;
     font-size: 87.5%; /* Base font size: 14px */
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'ClashGrotesk-Variable', 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.429;
     margin: 0;
     padding: 0;
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
 	margin-bottom: .8em;
-    font-family: 'Yanone Kaffeesatz', arial, serif;
+    font-family: 'ClashGrotesk-Variable', 'Yanone Kaffeesatz', arial, serif;
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }
@@ -84,8 +84,8 @@ ol {
 	margin: 0em 0 0 1.5em;
 }
 
-li { margin-top: 0.5em;
-     margin-bottom: 1em; }
+li { margin-top: 0.2em;
+     margin-bottom: 0.2em; }
 
 .post-info {
     float:right;
@@ -316,6 +316,21 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 
 	#extras .blogroll li {float: left; margin: 0 20px 0 0; max-width: 185px;}
 
+	/* Top links */
+	.top-links {
+		float: right;
+		max-width: 615px;
+	}
+	.top-links li {float: right; margin: 0 20px 0 0; max-width: 185px;}
+	.top-links ul {list-style-type: none}
+  .top-links a:link, .top-links a:visited {
+    color: #444;
+    display: block;
+    border-bottom: 1px solid #F4E3E3;
+    text-decoration: none;
+    padding: .3em .25em;
+  }
+
 	/* Social */
 	#extras .social {
 		float: right;
@@ -399,6 +414,10 @@ li:first-child .hentry, #content > .hentry {border: 0; margin: 0;}
 .entry-title {font-size: 3em; margin-bottom: 10px; margin-top: 0;}
 .entry-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
 .entry-title a:visited {background-color: #fff;}
+
+.other-articles-title {font-size: 3em; margin-bottom: 10px; margin-top: 0;}
+.other-articles-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
+.other-articles-title a:visited {background-color: #fff;}
 
 .hentry .post-info * {font-style: normal;}
 

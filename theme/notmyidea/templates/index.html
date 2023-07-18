@@ -8,8 +8,13 @@
         {% if loop.first and not articles_page.has_previous() %}
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-                    {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
+                    {% if article.thumbnail %}
+                        <img style="float: left; width: 100px; margin-right: 15px;" src="{{ SITEURL }}/{{THUMBNAIL_DIR}}/{{ article.thumbnail }}" alt="{{ article.title }}" />
+                    {% endif %}
+                    <h1 class="entry-title" style="font-size: 1.3em; font-weight: 500;"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                    {{ article.content|truncate(500) }}
+                    {% include 'article_infos_oneline.html' %}
+                    {% include 'comments.html' %}
                 </article>
             </aside><!-- /#featured -->
             {% if loop.length > 1 %}
@@ -26,15 +31,18 @@
             {% endif %}
             <li><article class="hentry">
                 <header>
-                    <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                    <h1 class="other-articles-title" style="font-size: 1.3em; font-weight: 500;"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
                 </header>
 
                 <div class="entry-content">
-                {% include 'article_infos.html' %}
-                {{ article.summary }}
-                <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-                {% include 'comments.html' %}
+                  {% if article.thumbnail %}
+                      <img style="float: left; width: 100px; margin-right: 15px;" src="{{ SITEURL }}/{{THUMBNAIL_DIR}}/{{ article.thumbnail }}" alt="{{ article.title }}" />
+                  {% endif %}
+                  {{ article.summary }}
+                  <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
+                  {% include 'article_infos_oneline.html' %}
+                  {% include 'comments.html' %}
                 </div><!-- /.entry-content -->
             </article></li>
         {% endif %}

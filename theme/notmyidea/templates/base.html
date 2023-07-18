@@ -7,6 +7,9 @@
         <meta name="generator" content="Pelican" />
         <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
         {% endif %}
@@ -20,7 +23,23 @@
 <body id="index" class="home">
 {% include 'github.html' %}
         <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 10px;">
+                  <h1 style="font-size: 2.6em; margin: 0; font-family: 'Yanone Kaffeesatz'">
+                    <a href="{{ SITEURL }}/" style="display: flex; flex-direction: row; align-items: start;">
+                      <img src="{{LOGO_URL}}" style="width: 40px; height: 40px; margin-right: 10px;">
+                      <span style="margin-top: 5px;">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</span>
+                    </a>
+                  </h1>
+                  {% if TOP_LINKS %}
+                          <div class="top-links">
+                                  <ul>
+                                  {% for name, link in TOP_LINKS %}
+                                      <li><a style="font-family: 'Yanone Kaffeesatz'; font-size: 1.2em;" href="{{ link }}">{{ name }}</a></li>
+                                  {% endfor %}
+                                  </ul>
+                          </div>
+                  {% endif %}
+                </div>
                 <nav><ul>
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
@@ -70,11 +89,6 @@
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
 {% include 'analytics.html' %}
