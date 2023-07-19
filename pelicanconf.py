@@ -28,7 +28,11 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {"images/lightecho-icon.ico": {"path": "favicon.ico"}}
 
 TOP_LINKS = (
-    ("Lightecho FAQ", "https://lightecho.io/faq"),
+    ("BPV", "https://bpventures.us/"),
+    ("Lightecho.io", "https://lightecho.io/"),
+)
+
+LINKS = (
     ("BPV", "https://bpventures.us/"),
     ("Lightecho.io", "https://lightecho.io/"),
 )

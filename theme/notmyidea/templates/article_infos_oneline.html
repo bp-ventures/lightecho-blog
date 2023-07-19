@@ -1,10 +1,10 @@
 <div style="display: flex; flex-direction: row; align-items: center; gap: 10px; float: right;">
         <abbr class="published" title="{{ article.date.isoformat() }}">
-                Published: {{ article.locale_date }}
+                Published: &nbsp;{{ article.locale_date }}
         </abbr>
         {% if article.modified %}
         <abbr class="modified" title="{{ article.modified.isoformat() }}">
-                Updated: {{ article.locale_modified }}
+                Updated: &nbsp;{{ article.locale_modified }}
         </abbr>
         {% endif %}
 
