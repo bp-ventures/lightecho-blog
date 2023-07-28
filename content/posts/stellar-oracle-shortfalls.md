@@ -1,4 +1,4 @@
----                                                                                                                                                                                                       
+---
 Title: The Existing Oracle Shortfall: Five Reasons Why Stellar Needs Lightecho for Off-Chain Data Integration
 Date: 2023-06-23T14:02:16Z
 Tags: oracle
@@ -9,7 +9,6 @@ Summary: Introducing Lightecho Oracle, a vital addition to Stellar's Soroban eco
 Thumbnail: introducingLightEcho.729595b4.png
 ---
 
- 
 BP Ventures is delighted to introduce the Lightecho Oracle, a pioneering Smart Contract Price Oracle on Stellar's Soroban system, as an essential addition to the ecosystem. The Lightecho Oracle aims to fill in the gaps left by existing data providers, offering extensive coverage and depth of market data that is vital for advanced financial products.
 
 One of the Lightecho Oracle's distinguishing features is its focus on providing emerging market currency data. With our extensive experience and deep expertise in handling these types of data feeds, we are able to offer a service that many other oracles do not cater to effectively. This focus empowers developers and companies to create more diverse and inclusive financial solutions, particularly for underrepresented and developing markets.
