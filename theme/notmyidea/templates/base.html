@@ -30,6 +30,7 @@
                       <span style="margin-top: 5px;">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</span>
                     </a>
                   </h1>
+                  </h1>
                   {% if TOP_LINKS %}
                           <div class="top-links">
                                   <ul>
@@ -39,6 +40,12 @@
                                   </ul>
                           </div>
                   {% endif %}
+                        <div class="switch" title="Click to toggle between a dark and light theme">
+                                <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round"></div>
+                                </label>
+                        </div><!-- /#theme-switch toggle button -->
                 </div>
                 <nav><ul>
                 {% for title, link in MENUITEMS %}
@@ -93,5 +100,6 @@
 
 {% include 'analytics.html' %}
 {% include 'disqus_script.html' %}
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/dark-light-mode.js""></script>
 </body>
 </html>
