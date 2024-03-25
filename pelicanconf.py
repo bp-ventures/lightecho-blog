@@ -3,7 +3,7 @@ SITENAME = "LightEcho Blog"
 SITEURL = ""
 LOGO_URL = "images/lightecho-icon-300x300.png"
 
-THUMBNAIL_DIR = 'images/thumbnails'
+THUMBNAIL_DIR = "images/thumbnails"
 
 PATH = "content"
 THEME = "notmyidea"
@@ -28,13 +28,19 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {"images/lightecho-icon.ico": {"path": "favicon.ico"}}
 
 TOP_LINKS = (
-    ("BPV", "https://bpventures.us/"),
-    ("Lightecho.io", "https://lightecho.io/"),
+    ("GitHub", "https://github.com/bp-ventures/lightecho-stellar-oracle"),
+    (
+        "Stellar",
+        "https://stellar.expert/explorer/public/contract/CDOR3QD27WAAF4TK4MO33TGQXR6RPNANNVLOY277W2XVV6ZVJ6X6X42T",
+    ),
 )
 
 LINKS = (
-    ("BPV", "https://bpventures.us/"),
-    ("Lightecho.io", "https://lightecho.io/"),
+    ("GitHub", "https://github.com/bp-ventures/lightecho-stellar-oracle"),
+    (
+        "Stellar",
+        "https://stellar.expert/explorer/public/contract/CDOR3QD27WAAF4TK4MO33TGQXR6RPNANNVLOY277W2XVV6ZVJ6X6X42T",
+    ),
 )
 
 # Social widget
