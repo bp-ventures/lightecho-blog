@@ -28,11 +28,8 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {"images/lightecho-icon.ico": {"path": "favicon.ico"}}
 
 TOP_LINKS = (
-    ("GitHub", "https://github.com/bp-ventures/lightecho-stellar-oracle"),
-    (
-        "Stellar",
-        "https://stellar.expert/explorer/public/contract/CDOR3QD27WAAF4TK4MO33TGQXR6RPNANNVLOY277W2XVV6ZVJ6X6X42T",
-    ),
+    ("BPV", "https://bpventures.us/"),
+    ("Lightecho.io", "https://lightecho.io/"),
 )
 
 LINKS = (

@@ -594,9 +594,9 @@ figure p.caption {
 	background-image: url('../images/icons/stackoverflow.png');
 }
 
-.social a[href*='twitter.com'] {
+/* .social a[href*='twitter.com'] {
 	background-image: url('../images/icons/twitter.png');
-}
+} */
 
 .social a[href*='vimeo.com'] {
 	background-image: url('../images/icons/vimeo.png');
@@ -904,4 +904,18 @@ input:checked+.slider:before {
 
 .slider.round:before {
 	border-radius: 50%;
+}
+
+
+:root {
+	--twitter-icon-light: url('../images/icons/twitter.png');
+	--twitter-icon-dark: url('../images/icons/twitter-white.png');
+}
+
+.social a[href*='twitter.com'] {
+	background-image: var(--twitter-icon-light);
+}
+
+[data-theme="dark"] .social a[href*='twitter.com'] {
+	background-image: var(--twitter-icon-dark);
 }
