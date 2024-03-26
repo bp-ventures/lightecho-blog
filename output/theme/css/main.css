@@ -606,6 +606,10 @@ figure p.caption {
 	background-image: url('../images/icons/youtube.png');
 }
 
+.social a[href*='stellar.expert'] {
+	background-image: url('../images/icons/stellar.png');
+}
+
 /*
 	About
 *****************/
