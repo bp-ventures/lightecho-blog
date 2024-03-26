@@ -541,7 +541,6 @@ figure p.caption {
 	background-image: url('../images/icons/gitorious.png');
 }
 
-.social a[href*='github.com'],
 .social a[href*='git.io'] {
 	background-image: url('../images/icons/github.png');
 	background-size: 16px 16px;
@@ -593,10 +592,6 @@ figure p.caption {
 .social a[href*='stackoverflow.com'] {
 	background-image: url('../images/icons/stackoverflow.png');
 }
-
-/* .social a[href*='twitter.com'] {
-	background-image: url('../images/icons/twitter.png');
-} */
 
 .social a[href*='vimeo.com'] {
 	background-image: url('../images/icons/vimeo.png');
@@ -914,6 +909,8 @@ input:checked+.slider:before {
 :root {
 	--twitter-icon-light: url('../images/icons/twitter.png');
 	--twitter-icon-dark: url('../images/icons/twitter-white.png');
+	--github-icon-light: url('../images/icons/github.png');
+	--github-icon-dark: url('../images/icons/github-light.svg');
 }
 
 .social a[href*='twitter.com'] {
@@ -922,4 +919,14 @@ input:checked+.slider:before {
 
 [data-theme="dark"] .social a[href*='twitter.com'] {
 	background-image: var(--twitter-icon-dark);
+}
+
+.social a[href*='github.com'] {
+	background-image: var(--github-icon-light);
+	background-size: 16px 16px;
+}
+
+[data-theme="dark"] .social a[href*='github.com'] {
+	background-image: var(--github-icon-dark);
+	background-size: 16px 16px;
 }
