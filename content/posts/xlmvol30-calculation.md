@@ -1,6 +1,6 @@
 ---
 Title: How we calculdate XLM 30 Volality and how it can be used in Option pricing
-Date: 2024-06-21T14:02:16Z
+Date: 2024-03-21T14:02:16Z
 Tags: oracle
 Category: oracle
 Slug: xlm-volatility-pricing
