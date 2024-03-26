@@ -3,7 +3,7 @@ SITENAME = "LightEcho Blog"
 SITEURL = ""
 LOGO_URL = "images/lightecho-icon-300x300.png"
 
-THUMBNAIL_DIR = 'images/thumbnails'
+THUMBNAIL_DIR = "images/thumbnails"
 
 PATH = "content"
 THEME = "notmyidea"
@@ -41,6 +41,11 @@ LINKS = (
 SOCIAL = (
     ("Twitter", "https://twitter.com/LightechoI"),
     ("Youtube", "https://www.youtube.com/@lightecho5266"),
+    ("GitHub", "https://github.com/bp-ventures/lightecho-stellar-oracle"),
+    (
+        "Stellar.expert",
+        "https://stellar.expert/explorer/public/contract/CDOR3QD27WAAF4TK4MO33TGQXR6RPNANNVLOY277W2XVV6ZVJ6X6X42T",
+    ),
 )
 
 DEFAULT_PAGINATION = 10
