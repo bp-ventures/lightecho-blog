@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="Pelican" />
+        <title>How we calculdate XLM 30 Volality and how it can be used in Option pricing</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta name="description" content="XLM Volatility pricing - how we canculate it and why it is important." />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 10px;">
+                  <h1 style="font-size: 2.6em; margin: 0; font-family: 'Yanone Kaffeesatz'">
+                    <a href="/" style="display: flex; flex-direction: row; align-items: start;">
+                      <img src="/images/lightecho-icon-300x300.png" style="width: 40px; height: 40px; margin-right: 10px;">
+                      <span style="margin-top: 5px;">LightEcho Blog</span>
+                    </a>
+                  </h1>
+                  </h1>
+                          <div class="top-links">
+                                  <ul>
+                                      <li><a style="font-family: 'Yanone Kaffeesatz'; font-size: 1.2em;" href="https://bpventures.us/">BPV</a></li>
+                                      <li><a style="font-family: 'Yanone Kaffeesatz'; font-size: 1.2em;" href="https://lightecho.io/">Lightecho.io</a></li>
+                                  </ul>
+                          </div>
+                        <div class="switch" title="Click to toggle between a dark and light theme">
+                                <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider round"></div>
+                                </label>
+                        </div><!-- /#theme-switch toggle button -->
+                </div>
+                <nav><ul>
+                    <li class="active"><a href="/category/oracle.html">oracle</a></li>
+                    <li><a href="/category/xlm.html">xlm</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title" style="font-weight: 500; font-size: 1.5em;">
+        <a href="/xlm-volatility-pricing.html" rel="bookmark"
+           title="Permalink to How we calculdate XLM 30 Volality and how it can be used in Option pricing">How we calculdate XLM 30 Volality and how it can be used in Option pricing</a></h1>
+    </header>
+
+    <div class="entry-content">
+          <img style="float: left; width: 200px; margin-right: 20px;" src="/images/thumbnails/vol-image.jpg" alt="How we calculdate XLM 30 Volality and how it can be used in Option pricing" />
+      <p>In Aristotle's "Politics", Thales of Miletus, a philosopher and mathematician from the 6th century BCE, used options to secure a low price for the use of olive presses before the harvest. Thales predicted a good harvest for olives, so he paid a deposit to secure the rights to use olive presses at a later date. When the harvest was indeed bountiful, the demand for olive presses surged, and Thales was able to rent out his rights at a much higher price than he paid, thus making a profit.</p>
+<p>This example illustrates the core principles of options trading: the right, but not the obligation, to buy or sell an asset at a predetermined price within a specified period.</p>
+<p>Options and futures are core to international trade in modern economies. All major companies in OECD countries use them to manage risk. One of the keys in making XLM more useful is to provide tools to reduce risk surrounding the use of crypto currencies. Major crypto such as BTC and ETH already have this calculation available from a couple of sources.</p>
+<p>Below are the details of how and we calculate the volatility and why it may be useful for calculating option pricing.</p>
+<h1>README for vol-function.py</h1>
+<h2>Overview</h2>
+<p>The script is designed to calculate the volatility of a cryptocurrency coin over a specified number of days, defaulting to 30 days. This calculation is particularly tailored for the Stellar Lumens (XLM) coin but can be adapted for any cryptocurrency (available on CoinMarketCap through CmcScraper) by changing the coin_code parameter. The script utilizes the CoinMarketCap (CMC) scraper to fetch historical price data, from which it computes the daily returns and their standard deviation as a measure of volatility. This volatility is then annualized, a common practice in financial analysis, especially when preparing inputs for models like the Black-Scholes formula. In the future we will probably switch the daily rates to use the one internal to LightEcho daily rate.</p>
+<h2>Why Calculate Volatility This Way?</h2>
+<h3>Log Returns</h3>
+<p>The script calculates daily returns using logarithmic returns and are preferred in financial calculations for a number of reasons:</p>
+<ul>
+<li><strong>Normalization</strong>: Log returns are more normalized (i.e., they are more likely to follow a normal distribution), which is an assumption in many financial models.</li>
+<li><strong>Small Price Changes</strong>: For small price changes, log returns are approximately equal to the percentage change, making them intuitive to use and interpret.</li>
+</ul>
+<h3>Annualizing Volatility</h3>
+<p>Annualizing the volatility involves scaling the standard deviation of the log returns by the square root of the number of trading days in a year divided by the time horizon of the input data. This is done because Black-Scholes requires annualized volatility.</p>
+<p>The formula used is:</p>
+<ul>
+<li><strong>Volatility * sqrt(365/days)</strong></li>
+</ul>
+<p>It's a standard practice in the market for annualizing volatility.</p>
+<h2>How It Works</h2>
+<ol>
+<li>
+<p><strong>Date Handling</strong>: The script calculates the start date by subtracting the specified number of days (plus one to include the start day in the count) from the current date. Both dates are formatted as strings for the CMC scraper.</p>
+</li>
+<li>
+<p><strong>Data Retrieval</strong>: Using the CmcScraper, historical price data for the specified coin between the start and current dates is fetched.</p>
+</li>
+<li>
+<p><strong>Volatility Calculation</strong>:</p>
+<ul>
+<li>The closing prices are converted to floats.</li>
+<li>Daily log returns are calculated.</li>
+<li>The standard deviation (std) of these log returns is computed over the specified window (default 30 days), representing the volatility.</li>
+<li>This volatility is then annualized by multiplying it by the square root of (365/days used in calculation), making it suitable for use in annualized financial models. 365 is used since crypto exchanges are live 24/7.</li>
+</ul>
+</li>
+<li>
+<p><strong>Output</strong>: The script returns a dictionary containing the annualized volatility along with other metadata related to the calculation.</p>
+</li>
+</ol>
+<footer class="post-info">
+        <abbr class="published" title="2024-03-21T14:02:16+00:00">
+                Published: &nbsp;Thu 21 March 2024
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/anthony.html">anthony</a>
+        </address>
+<p>In <a href="/category/oracle.html">oracle</a>.</p>
+<p>tags: <a href="/tag/oracle.html">oracle</a> </p>
+</footer><!-- /.post-info -->    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="https://bpventures.us/">BPV</a></li>
+                            <li><a href="https://lightecho.io/">Lightecho.io</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/LightechoI">Twitter</a></li>
+                            <li><a href="https://www.youtube.com/@lightecho5266">Youtube</a></li>
+                            <li><a href="https://github.com/bp-ventures/lightecho-stellar-oracle">GitHub</a></li>
+                            <li><a href="https://stellar.expert/explorer/public/contract/CDOR3QD27WAAF4TK4MO33TGQXR6RPNANNVLOY277W2XVV6ZVJ6X6X42T">Stellar.expert</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+        </footer><!-- /#contentinfo -->
+
+<script src="/theme/js/dark-light-mode.js""></script>
+</body>
+</html>

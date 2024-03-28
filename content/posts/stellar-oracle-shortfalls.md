@@ -3,7 +3,7 @@ Title: The Existing Oracle Shortfall: Five Reasons Why Stellar Needs Lightecho f
 Date: 2023-06-23T14:02:16Z
 Tags: oracle
 Category: oracle
-Slug: five-reasons-why-stellar-needs-lightecho-for-offchain-data
+Slug: five-reasons-why-stellar-needs-lightecho-for-offchain-data-2
 Authors: Christian Larsen
 Summary: Introducing Lightecho Oracle, a vital addition to Stellar's Soroban ecosystem, providing extensive market data for advanced financial solutions.
 Thumbnail: introducingLightEcho.729595b4.png
